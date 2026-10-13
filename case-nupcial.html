@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Nupcial | Nelma Cavaleiro</title>
+  <meta name="description" content="Designing, building and launching a live platform for couples and wedding vendors, from prototype to production.">
+  <meta property="og:title" content="Nupcial | Nelma Cavaleiro">
+  <meta property="og:description" content="Designing, building and launching a live platform for couples and wedding vendors, from prototype to production.">
+  <meta property="og:type" content="website">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='8' fill='%23241329'/><text x='16' y='21.5' font-family='Arial' font-size='14' font-weight='700' fill='%23F1D3CB' text-anchor='middle'>NC</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&family=Figtree:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a class="brand" href="index.html">Nelma Cavaleiro</a>
+      <button class="nav-toggle" aria-expanded="false" aria-controls="site-nav">Menu</button>
+      <nav aria-label="Main">
+        <ul class="nav" id="site-nav">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="work.html" aria-current="page">Work</a></li>
+        <li><a href="approach.html">Approach</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a class="btn btn-rose btn-small" href="assets/Nelma_Cavaleiro_CV.pdf" download>Download CV</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <main id="main">
+    <section class="page-head">
+      <div class="wrap">
+        <p class="crumbs"><a href="work.html">Work</a> / Nupcial</p>
+        <h1>Nupcial: architecting and launching a two-sided SaaS platform</h1>
+        <p>Designing, building and launching a live platform for couples and wedding vendors, from prototype to production.</p>
+        <dl class="case-meta">
+          <div><dt>Role</dt><dd>Founder and developer</dd></div>
+          <div><dt>Period</dt><dd>February 2026 to present</dd></div>
+          <div><dt>Focus</dt><dd>Architecture and delivery</dd></div>
+          <div><dt>Status</dt><dd>Live</dd></div>
+        </dl>
+      </div>
+    </section>
+    <section class="section">
+      <div class="wrap">
+        <div class="prose-grid">
+          <article class="prose">
+            <h2>Context</h2>
+            <p>Nupcial is a wedding planning platform with two sides: couples who plan their wedding, and vendors who offer services to them. It is live at <a href="https://nupcial.app" target="_blank" rel="noopener">nupcial.app</a>, and I own the whole lifecycle, from product concept and UX through to architecture, development and deployment.</p>
+            <h2>Approach</h2>
+            <p>I produced a first prototype from a single prompt in Google AI Studio at a Manchester Digital event. I then rebuilt the product entirely over approximately three months, using Claude Code for AI-assisted development and debugging, so that every part of the architecture was deliberate rather than generated.</p>
+            <h2>Architecture</h2>
+            <p>The client is built with React and Vite, with Zustand managing application state. Supabase provides authentication, a PostgreSQL database and Edge Functions for server-side logic. Stripe Connect handles vendor payments and the platform's commission.</p>
+            <h2>Key decisions</h2>
+            <ul>
+              <li><strong>Data isolation by design.</strong> Row-level security in the database means each couple can only ever read and change their own wedding data, enforced at the data layer rather than in the interface.</li>
+              <li><strong>Reliable account creation.</strong> Wedding creation at sign-up is idempotent, so a repeated request cannot create duplicate records.</li>
+              <li><strong>A business model that lowers the barrier to adoption.</strong> Nupcial is free for couples, with a commission on vendor transactions through Stripe Connect.</li>
+            </ul>
+            <h2>Features delivered</h2>
+            <p>Guest and seating management with drag and drop, budget tracking, vendor onboarding and pipeline, a wedding album and live slideshow, and an AI assistant.</p>
+            <h2>Outcome</h2>
+            <p>Nupcial is publicly launched and in ongoing development. I used it to plan my own wedding, and our guests used it on the day.</p>
+          </article>
+          <aside class="side">
+            <figure class="arch side-box">
+              <svg viewBox="0 0 300 330" role="img" aria-label="Nupcial architecture: a React, Vite and Zustand client connects to Supabase for authentication, a PostgreSQL database with row-level security, and Edge Functions, which connect to Stripe Connect for payments.">
+                <g class="arch-links"><path d="M150 74 V112"/><path d="M150 226 V256"/></g>
+                <rect class="a-box" x="20" y="14" width="260" height="60" rx="8"/>
+                <text x="150" y="40" class="a-title" text-anchor="middle">Client</text>
+                <text x="150" y="60" class="a-sub" text-anchor="middle">React, Vite, Zustand</text>
+                <rect class="a-box a-main" x="20" y="112" width="260" height="114" rx="8"/>
+                <text x="150" y="136" class="a-title" text-anchor="middle">Supabase</text>
+                <rect class="a-chip" x="34" y="150" width="114" height="28" rx="5"/>
+                <text x="91" y="169" class="a-chip-t" text-anchor="middle">Authentication</text>
+                <rect class="a-chip" x="152" y="150" width="114" height="28" rx="5"/>
+                <text x="209" y="169" class="a-chip-t" text-anchor="middle">Edge Functions</text>
+                <rect class="a-chip" x="34" y="184" width="232" height="28" rx="5"/>
+                <text x="150" y="203" class="a-chip-t" text-anchor="middle">PostgreSQL with row-level security</text>
+                <rect class="a-box" x="20" y="256" width="260" height="60" rx="8"/>
+                <text x="150" y="282" class="a-title" text-anchor="middle">Stripe Connect</text>
+                <text x="150" y="302" class="a-sub" text-anchor="middle">Vendor payments and commission</text>
+              </svg>
+              <figcaption>Simplified architecture</figcaption>
+            </figure>
+            <div class="side-box"><h3>Tools</h3><p>React, Vite, Zustand, Supabase, Stripe Connect, Git and GitHub, Claude Code</p></div>
+          </aside>
+        </div>
+        <nav class="next" aria-label="More case studies">
+          <a href="work.html">All work</a>
+          <a href="case-ai-sprint.html">Next: AI deployment sprint</a>
+        </nav>
+      </div>
+    </section>
+  </main>
+  <section class="contact" id="contact">
+    <div class="wrap">
+      <h2>Let's talk about the problem you are trying to solve.</h2>
+      <ul class="contact-links">
+        <li><a href="mailto:nelma_william_@hotmail.com">nelma_william_@hotmail.com</a></li>
+        <li><a href="https://www.linkedin.com/in/nelmacavaleiro/" target="_blank" rel="noopener">LinkedIn</a></li>
+        <li><a href="https://github.com/nelmacavaleiro" target="_blank" rel="noopener">GitHub</a></li>
+        <li><a href="assets/Nelma_Cavaleiro_CV.pdf" download>Download CV (PDF)</a></li>
+      </ul>
+    </div>
+  </section>
+  <footer class="site-footer">
+    <div class="wrap"><p>&copy; <span id="year">2026</span> Nelma Cavaleiro. Manchester, UK.</p></div>
+  </footer>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
