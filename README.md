@@ -68,3 +68,4 @@ I use AI-assisted development tools as part of my workflow for development, debu
 - **Portfolio:** [nelmacavaleiro.github.io](https://nelmacavaleiro.github.io)
 - **LinkedIn:** [linkedin.com/in/nelma-cavaleiro](https://www.linkedin.com/in/nelma-cavaleiro)
 - **GitHub:** [github.com/nelmacavaleiro](https://github.com/nelmacavaleiro)
+
