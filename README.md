@@ -1,23 +1,27 @@
-# Nelma Cavaleiro: portfolio
+# Nelma Cavaleiro | Portfolio
 
-Personal portfolio website, hosted free on GitHub Pages at https://nelmacavaleiro.github.io
+**Live site:** [nelmacavaleiro.github.io](https://nelmacavaleiro.github.io)
+
+Personal portfolio presenting my work across solutions design, information systems, data and AI. It includes case studies on Nupcial, a live two-sided wedding planning platform; an AI Deployment Sprint with Manchester Digital and Manchester Metropolitan University; operational and process improvement work at Brand Addition; and my MSc research on Business Intelligence in project management.
+
+## About the site
+
+- Built with HTML, CSS and JavaScript, without frameworks
+- Multi-page structure with a consistent design system defined through CSS variables
+- Responsive layout with automatic light and dark mode
+- Accessibility features, including semantic HTML, keyboard focus styles and reduced-motion support
+- Hosted on GitHub Pages
 
 ## Pages
 
-- `index.html`: home page with focus areas, selected work and how I work
-- `work.html`: all case studies
-- `case-nupcial.html`, `case-ai-sprint.html`, `case-brand-addition.html`, `case-research.html`: individual case studies
-- `approach.html`: my approach in detail
-- `about.html`: skills, experience, education and certifications
+| Page | Content |
+|---|---|
+| Home | Focus areas, selected work and how I work |
+| Work | All case studies |
+| Case studies | Nupcial, AI Deployment Sprint, Brand Addition and MSc research |
+| Approach | My approach to problem-solving, with examples |
+| About | Experience, skills, education and certifications |
 
-## Adding the video
+## Contact
 
-Upload the video to YouTube as Unlisted, copy the ID from the link (the part after `v=`), and paste it into `YOUTUBE_VIDEO_ID` at the top of `assets/js/main.js`. The video section appears on the home page once the ID is set.
-
-## Updating the CV
-
-Replace `assets/Nelma_Cavaleiro_CV.pdf` with the new version, keeping the same file name.
-
-## Changing colours
-
-All colours are defined as variables at the top of `assets/css/style.css`.
+[LinkedIn](https://www.linkedin.com/in/nelma-cavaleiro) | [GitHub](https://github.com/nelmacavaleiro)
