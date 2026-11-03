@@ -4,9 +4,9 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>AI deployment sprint | Nelma Cavaleiro</title>
-  <meta name="description" content="Leading a team through discovery and options appraisal to remove repetitive design work, with people kept in control.">
+  <meta name="description" content="Leading discovery, analysis and solution design to remove repetitive design work, with people kept in control at every stage.">
   <meta property="og:title" content="AI deployment sprint | Nelma Cavaleiro">
-  <meta property="og:description" content="Leading a team through discovery and options appraisal to remove repetitive design work, with people kept in control.">
+  <meta property="og:description" content="Leading discovery, analysis and solution design to remove repetitive design work, with people kept in control at every stage.">
   <meta property="og:type" content="website">
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='8' fill='%23241329'/><text x='16' y='21.5' font-family='Arial' font-size='14' font-weight='700' fill='%23F1D3CB' text-anchor='middle'>NC</text></svg>">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -35,12 +35,12 @@
     <section class="page-head">
       <div class="wrap">
         <p class="crumbs"><a href="work.html">Work</a> / AI deployment sprint</p>
-        <h1>AI deployment sprint: automation discovery for a UK manufacturer</h1>
-        <p>Leading a team through discovery and options appraisal to remove repetitive design work, with people kept in control.</p>
+        <h1>AI deployment sprint: from discovery to solution design for a UK manufacturer</h1>
+        <p>Leading discovery, analysis and solution design to remove repetitive design work, with people kept in control at every stage.</p>
         <dl class="case-meta">
           <div><dt>Role</dt><dd>Team Lead</dd></div>
           <div><dt>Period</dt><dd>October to November 2026</dd></div>
-          <div><dt>Focus</dt><dd>Discovery and solution options</dd></div>
+          <div><dt>Focus</dt><dd>Business analysis and solution design</dd></div>
           <div><dt>Status</dt><dd>In progress</dd></div>
         </dl>
       </div>
@@ -50,25 +50,44 @@
         <div class="prose-grid">
           <article class="prose">
             <h2>Context</h2>
-            <p>An eight-week AI Deployment Sprint delivered by Manchester Digital with Manchester Metropolitan University. I lead a team of three working with a UK manufacturer of leisure safety products.</p>
+            <p>An eight-week AI Deployment Sprint delivered by Manchester Digital with Manchester Metropolitan University. I lead a team working with a UK manufacturer of leisure safety products.</p>
             <h2>The problem</h2>
-            <p>Preparing bespoke products for automated cutting involves repetitive manual design work across several software tools that are not connected to one another.</p>
+            <p>Preparing bespoke products for automated cutting involves repetitive manual design work across several software tools that are not connected to one another, which limits the capacity of the person who does it.</p>
             <h2>My role</h2>
-            <p>As Team Lead, I am responsible for planning, coordination, escalation, documentation and stakeholder communication, alongside contributing to the analysis and solution design.</p>
-            <h2>Approach</h2>
+            <p>As Team Lead, I am responsible for planning, coordination, documentation and client communication. In practice, I have also led much of the business and technical analysis and the solution design.</p>
+            <h2>Discovery and business analysis</h2>
             <ul>
-              <li>Current-state process mapping, BPMN and data flow modelling.</li>
-              <li>Root cause analysis of where time and errors enter the process.</li>
-              <li>Requirements and acceptance criteria agreed with the process owner.</li>
-              <li>An options appraisal comparing build and buy routes against cost, risk and value.</li>
-              <li>Human review before anything goes to production, and careful data governance in the use of AI tools.</li>
+              <li>Agreed the problem statement with the client and mapped the order-to-manufacture process in BPMN, reviewed and approved by the person who does the work.</li>
+              <li>Timed the current process: a standard design took 25 minutes, of which the manufacturing drawing alone took 72%. This showed where the real time cost was, which was not where it had first been assumed.</li>
+              <li>Wrote the business analysis: stakeholders and pain points, baseline measures, root cause analysis (fishbone and 5 Whys), constraints, user stories with acceptance criteria, and the business case.</li>
+              <li>Captured a traceability requirement from operations and built it into the solution criteria.</li>
             </ul>
-            <h2>Outcome</h2>
-            <p>The sprint is under way. Outcomes will be published here once it concludes and the client has approved what can be shared.</p>
+            <h2>Technical analysis with Python</h2>
+            <ul>
+              <li>Analysed 130 design and production files using Python in VS Code, with AI-assisted development, running everything locally and read-only. I used ezdxf to read and measure the cutting files, pypdf to extract details from drawings and orders, and zipfile to open the design files and extract the formulas behind the parametric model.</li>
+              <li>Compared raw design exports with finished production files for a real order, identifying exactly which steps were manual, and found and resolved a 30 mm dimensional discrepancy.</li>
+              <li>Derived the cutting machine's file requirements from its configuration and tested sample files against them.</li>
+            </ul>
+            <h2>Rules discovery and validation</h2>
+            <p>From the analysis, I extracted the design, manufacturing, machine and drawing rules, labelled as observed until confirmed, then validated them with the client: over 40 rules in a documented register. An automated check showed the rules reproduced the finished cutting files, passing 11 of 11 and 14 of 15 checks. Where sources disagreed, I raised the inconsistencies and resolved them with the client.</p>
+            <h2>Solution design</h2>
+            <ul>
+              <li>Wrote the solution analysis: capabilities, functional and non-functional requirements with MoSCoW priorities, guardrails, a review of existing software, an options evaluation, feasibility tests and a recommendation.</li>
+              <li>Designed a rules-based order-to-production tool that reads the sales order, applies the documented rules and produces the cutting file and manufacturing drawing, with human approval at each stage. AI is used to help build the tool, not inside it, so production decisions stay predictable and checkable.</li>
+              <li>Designed it around two needs: saving the designer's time, and traceability for operations.</li>
+            </ul>
+            <h2>Proof of concept and presentation</h2>
+            <p>I built a Python proof of concept that read a real order and reproduced the client's approved cutting file, then a browser demo of the full workflow, tested against the proof of concept with identical results. The client reviewed the generated outputs and confirmed they read well. I presented the current process, the proposed solution, requirements, guardrails, costs and risks to the client.</p>
+            <h2>Preparing the build</h2>
+            <p>To keep AI-written code readable and maintainable, I wrote a code design specification (layered architecture, domain model and function contracts), a set of rules for AI-assisted coding, and automated quality checks with ruff, mypy, import-linter and GitHub Actions, proven to catch violations.</p>
+            <h2>Outcome so far</h2>
+            <p>The sprint is still under way, and the client is choosing which route to take forward. Final outcomes will be published here once the sprint concludes and the client has approved what can be shared. Throughout, client data has stayed within the client's own environment.</p>
           </article>
           <aside class="side">
             <div class="side-box"><h3>Status</h3><p>In progress, October to November 2026</p></div>
-            <div class="side-box"><h3>Methods</h3><p>BPMN, data flow diagrams, root cause analysis, requirements and acceptance criteria, options appraisal</p></div>
+            <div class="side-box"><h3>Key figures</h3><p>130 files analysed, over 40 rules validated, 72% of design time found in a single step</p></div>
+            <div class="side-box"><h3>Methods</h3><p>BPMN, root cause analysis, user stories and acceptance criteria, MoSCoW, options evaluation, proof of concept</p></div>
+            <div class="side-box"><h3>Tools</h3><p>Python (ezdxf, pypdf, zipfile), VS Code, Git and GitHub, GitHub Actions, Lucidchart, Claude Code</p></div>
           </aside>
         </div>
         <nav class="next" aria-label="More case studies">
