@@ -250,3 +250,17 @@ h1, h2, h3 { font-family: var(--display); letter-spacing: -0.02em; }
   .step-detail { grid-template-columns: 1fr; gap: 12px; }
   .step-detail > div:last-child { grid-column: auto; }
 }
+
+/* Screenshot gallery */
+.gallery-section { margin-top: 56px; }
+.gallery-section h2 { font-size: 1.55rem; margin: 0 0 8px; }
+.gallery-section > p { color: var(--muted); margin: 0 0 24px; max-width: 66ch; }
+.gallery { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 22px; }
+.shot { margin: 0; }
+.shot a { display: block; border: 1px solid var(--line); border-radius: 12px; overflow: hidden; background: var(--surface); transition: border-color .15s ease; }
+.shot a:hover, .shot a:focus-visible { border-color: var(--rose); }
+.shot img { display: block; width: 100%; height: auto; }
+.shot figcaption { font-size: .92rem; color: var(--muted); margin-top: 8px; line-height: 1.5; }
+.shot figcaption b { color: var(--ink); font-weight: 600; }
+.feature-shot { margin: 18px 0 0; max-width: 560px; }
+@media (max-width: 720px) { .gallery { grid-template-columns: 1fr; } }

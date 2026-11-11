@@ -36,11 +36,11 @@
       <div class="wrap">
         <p class="crumbs"><a href="work.html">Work</a> / AI deployment sprint</p>
         <h1>AI deployment sprint: from discovery to solution design for a UK manufacturer</h1>
-        <p>Leading discovery, analysis and solution design to remove repetitive design work, with people kept in control at every stage.</p>
+        <p>From discovery and analysis to designing and building a working tool that removes repetitive design work, with people kept in control at every stage.</p>
         <dl class="case-meta">
           <div><dt>Role</dt><dd>Team Lead</dd></div>
           <div><dt>Period</dt><dd>October to November 2026</dd></div>
-          <div><dt>Focus</dt><dd>Business analysis and solution design</dd></div>
+          <div><dt>Focus</dt><dd>Business analysis, solution design and build</dd></div>
           <div><dt>Status</dt><dd>In progress</dd></div>
         </dl>
       </div>
@@ -76,18 +76,31 @@
               <li>Designed a rules-based order-to-production tool that reads the sales order, applies the documented rules and produces the cutting file and manufacturing drawing, with human approval at each stage. AI is used to help build the tool, not inside it, so production decisions stay predictable and checkable.</li>
               <li>Designed it around two needs: saving the designer's time, and traceability for operations.</li>
             </ul>
-            <h2>Proof of concept and presentation</h2>
-            <p>I built a Python proof of concept that read a real order and reproduced the client's approved cutting file, then a browser demo of the full workflow, tested against the proof of concept with identical results. The client reviewed the generated outputs and confirmed they read well. I presented the current process, the proposed solution, requirements, guardrails, costs and risks to the client.</p>
-            <h2>Preparing the build</h2>
-            <p>To keep AI-written code readable and maintainable, I wrote a code design specification (layered architecture, domain model and function contracts), a set of rules for AI-assisted coding, and automated quality checks with ruff, mypy, import-linter and GitHub Actions, proven to catch violations.</p>
+            <h2>Building the tool</h2>
+            <p>I designed and built a Python and Flask tool that turns a sales order into a cutting file (DXF) and a manufacturing drawing, with the designer approving every stage. I wrote the specification first, then delivered the work as 18 small user stories, directing Claude Code as the implementation agent against the specification, written coding rules and acceptance tests for every story. I approved each plan before any code was written and reviewed every change before it was merged.</p>
+            <ul>
+              <li>A layered architecture, with automatic checks that enforce which parts of the code may call which.</li>
+              <li>Automated quality gates on every commit: ruff, mypy (strict), import-linter and pytest, with a separate branch for each story.</li>
+              <li>An order reader that verifies every line and refuses anything it cannot check, so errors are caught before anything is generated.</li>
+              <li>No AI inside the tool and no external services: the rules are applied in plain code, so the same order always gives the same result, and client data stays within the client's environment.</li>
+            </ul>
+            <h2>Testing and validation</h2>
+            <ul>
+              <li>Generated cutting files were compared automatically against the client's approved reference files.</li>
+              <li>Cutting files loaded on the client's cutting machine software with correct dimensions.</li>
+              <li>Ambiguous rules and labelling conventions were resolved directly with the designer before being built, rather than guessed.</li>
+              <li>A user trial with the client's team has been set up to gather feedback on the working tool.</li>
+            </ul>
+            <h2>Handover</h2>
+            <p>I produced install, user and maintenance guides, and demonstrated the working solution live to the client and to the programme team, including the structured approach used to build it.</p>
             <h2>Outcome so far</h2>
-            <p>The sprint is still under way, and the client is choosing which route to take forward. Final outcomes will be published here once the sprint concludes and the client has approved what can be shared. Throughout, client data has stayed within the client's own environment.</p>
+            <p>The tool works end to end for standard products, from order to cutting file and drawing. Some tests are still to come, such as nesting on the cutting machine, and the time and cost savings have not yet been measured, so they remain targets. Final outcomes will be shared here once the client has approved what can be published.</p>
           </article>
           <aside class="side">
             <div class="side-box"><h3>Status</h3><p>In progress, October to November 2026</p></div>
-            <div class="side-box"><h3>Key figures</h3><p>130 files analysed, over 40 rules validated, 72% of design time found in a single step</p></div>
+            <div class="side-box"><h3>Key figures</h3><p>130 files analysed, over 40 rules validated, 72% of design time found in a single step, 18 user stories delivered</p></div>
             <div class="side-box"><h3>Methods</h3><p>BPMN, root cause analysis, user stories and acceptance criteria, MoSCoW, options evaluation, proof of concept</p></div>
-            <div class="side-box"><h3>Tools</h3><p>Python (ezdxf, pypdf, zipfile), VS Code, Git and GitHub, GitHub Actions, Lucidchart, Claude Code</p></div>
+            <div class="side-box"><h3>Tools</h3><p>Python (ezdxf, pypdf, zipfile), Flask, pytest, ruff, mypy, import-linter, Git, VS Code, Lucidchart, Claude Code</p></div>
           </aside>
         </div>
         <nav class="next" aria-label="More case studies">
