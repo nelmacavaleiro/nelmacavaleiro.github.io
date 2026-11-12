@@ -286,3 +286,21 @@ h1, h2, h3 { font-family: var(--display); letter-spacing: -0.02em; }
   .about-head { grid-template-columns: 1fr; gap: 28px; }
   .portrait { width: 180px; order: -1; }
 }
+
+/* Photo grids (projects, education, journey) */
+.photos { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 22px; margin-top: 32px; }
+.photos .shot a { height: auto; }
+.photos.ratio-34 .shot a { aspect-ratio: 3 / 4; }
+.photos.ratio-11 .shot a { aspect-ratio: 1 / 1; background: var(--plum-tint); }
+.photos.ratio-11 .shot img { object-fit: contain; object-position: center; }
+.photos.ratio-34 .shot img { object-fit: cover; object-position: center top; }
+.photos .shot-free img { height: auto; object-fit: initial; }
+.photos .shot-free { grid-column: 1 / -1; }
+.photos .shot-free.narrow { max-width: 720px; }
+.edu-photos { max-width: 760px; }
+.edu-wide .shot-free { max-width: 900px; }
+.edu-meta { color: var(--muted); font-weight: 600; margin: 0 0 14px; }
+.prose h3 { font-size: 1.15rem; margin: 26px 0 8px; }
+.journey p { max-width: 72ch; }
+.creds dt a { color: inherit; }
+.photos .shot-free.narrow-s { max-width: 520px; }
