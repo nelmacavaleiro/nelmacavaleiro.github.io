@@ -304,3 +304,76 @@ h1, h2, h3 { font-family: var(--display); letter-spacing: -0.02em; }
 .journey p { max-width: 72ch; }
 .creds dt a { color: inherit; }
 .photos .shot-free.narrow-s { max-width: 520px; }
+
+/* Home: longer career map and three focus areas */
+.links path:nth-child(4) { animation-delay: 1.2s; }
+.links path:nth-child(5) { animation-delay: 1.6s; }
+.joints circle:nth-child(4) { animation-delay: 1.8s; }
+.joints circle:nth-child(5) { animation-delay: 2.2s; }
+.cap-grid.three { grid-template-columns: repeat(3, 1fr); }
+.work-grid.three { grid-template-columns: repeat(3, 1fr); }
+@media (max-width: 960px) { .cap-grid.three, .work-grid.three { grid-template-columns: 1fr; } }
+
+/* Collages: one card per experience, photos laid out in a grid */
+.collage-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 28px; }
+.collage { background: var(--surface); border: 1px solid var(--line); border-radius: 18px; padding: 14px; margin: 0; display: flex; flex-direction: column; }
+.collage.wide { grid-column: 1 / -1; }
+.collage .tiles { display: grid; gap: 8px; aspect-ratio: 4 / 3; grid-template-columns: repeat(2, minmax(0, 1fr)); grid-template-rows: repeat(2, minmax(0, 1fr)); }
+.collage.wide .tiles { aspect-ratio: 16 / 7; }
+.collage .tiles a { display: block; position: relative; min-height: 0; overflow: hidden; border-radius: 10px; background: var(--plum-tint); }
+.collage .tiles img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; display: block; transition: transform .3s ease; }
+.collage .tiles a:hover img, .collage .tiles a:focus-visible img { transform: scale(1.03); }
+.collage .tiles img.contain { object-fit: contain; background: #fff; }
+.collage.t1 .tiles { grid-template-columns: 1fr; grid-template-rows: 1fr; }
+.collage.t2 .tiles { grid-template-rows: 1fr; }
+.collage.t3 .tiles a:first-child { grid-row: span 2; }
+.collage.t4row .tiles { grid-template-columns: repeat(4, minmax(0, 1fr)); grid-template-rows: 1fr; aspect-ratio: 16 / 8; }
+.collage.t5 .tiles { grid-template-columns: 2fr 1fr 1fr; }
+.collage.t5 .tiles a:first-child { grid-row: span 2; }
+.collage figcaption { padding: 14px 6px 4px; }
+.c-title { font-family: var(--display); font-weight: 700; font-size: 1.12rem; color: var(--ink); margin: 0; letter-spacing: -.01em; }
+.c-meta { color: var(--link); font-weight: 600; font-size: .9rem; margin: 2px 0 6px; }
+.c-note { color: var(--muted); font-size: .95rem; margin: 0; }
+.collage blockquote { margin: 12px 0 0; padding: 10px 14px; border-left: 3px solid var(--rose); background: var(--plum-tint); border-radius: 0 8px 8px 0; font-style: italic; font-size: .95rem; }
+.collage blockquote cite { display: block; font-style: normal; color: var(--muted); font-size: .85rem; margin-top: 4px; }
+.compare { display: grid; grid-template-columns: 1fr 1fr; gap: 28px; margin-top: 28px; }
+.compare figure { margin: 0; background: var(--surface); border: 1px solid var(--line); border-radius: 18px; padding: 14px; }
+.compare a { display: block; border-radius: 10px; overflow: hidden; }
+.compare img { display: block; width: 100%; aspect-ratio: 16 / 10; object-fit: cover; object-position: top left; }
+.compare figcaption { padding: 12px 6px 4px; }
+.collage-block { margin-top: 56px; }
+.collage-block > h2 { font-size: 1.55rem; margin: 0 0 8px; }
+.collage-block > p { color: var(--muted); margin: 0 0 24px; max-width: 66ch; }
+@media (max-width: 760px) {
+  .collage-grid, .compare { grid-template-columns: 1fr; }
+  .collage.wide .tiles { aspect-ratio: 4 / 3; }
+  .collage.t4row .tiles { grid-template-columns: repeat(2, minmax(0, 1fr)); grid-template-rows: repeat(2, minmax(0, 1fr)); aspect-ratio: 1 / 1; }
+  .collage.t5 .tiles { grid-template-columns: 1fr 1fr; grid-template-rows: repeat(3, minmax(0, 1fr)); aspect-ratio: 3 / 4; }
+  .collage.t5 .tiles a:first-child { grid-row: auto; grid-column: span 2; }
+}
+
+/* About: experience and skills side by side */
+.about-cols { display: grid; grid-template-columns: minmax(0, 1.55fr) minmax(0, 1fr); gap: 56px; align-items: start; }
+.about-cols > div > h2 { font-size: clamp(1.6rem, 2.6vw, 2.1rem); margin: 0 0 24px; }
+.skill-stack { display: flex; flex-direction: column; gap: 16px; }
+@media (max-width: 960px) { .about-cols { grid-template-columns: 1fr; gap: 40px; } }
+
+/* Certifications */
+.cert-list { display: grid; gap: 28px; }
+.cert { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.1fr); gap: 32px; background: var(--surface); border: 1px solid var(--line); border-radius: 18px; padding: 24px; align-items: start; }
+.cert h2 { font-size: 1.4rem; margin: 0 0 4px; }
+.cert dl { display: grid; grid-template-columns: auto 1fr; gap: 6px 18px; margin: 16px 0 0; }
+.cert dt { color: var(--muted); font-size: .95rem; }
+.cert dd { margin: 0; font-weight: 600; overflow-wrap: anywhere; }
+.cert-images { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 12px; }
+.cert-images a { display: block; border: 1px solid var(--line); border-radius: 10px; overflow: hidden; background: #fff; }
+.cert-images img { display: block; width: 100%; height: auto; }
+@media (max-width: 860px) { .cert { grid-template-columns: 1fr; } }
+
+/* Method diagram (AI sprint) */
+.method { list-style: none; margin: 8px 0 0; padding: 0; display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); gap: 10px; counter-reset: m; }
+.method li { counter-increment: m; background: var(--surface); border: 1px solid var(--line); border-top: 3px solid var(--rose); border-radius: 10px; padding: 14px 12px; font-size: .92rem; line-height: 1.4; }
+.method li::before { content: counter(m); display: block; font-family: var(--display); font-weight: 700; color: var(--rose); font-size: 1.3rem; margin-bottom: 4px; }
+.method b { display: block; color: var(--ink); margin-bottom: 2px; }
+.method span { color: var(--muted); }
+@media (max-width: 960px) { .method { grid-template-columns: repeat(2, minmax(0, 1fr)); } }

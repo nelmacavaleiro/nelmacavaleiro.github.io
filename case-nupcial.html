@@ -4,9 +4,9 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Nupcial | Nelma Cavaleiro</title>
-  <meta name="description" content="Designing, building and launching a live platform for couples and wedding vendors, from prototype to production.">
+  <meta name="description" content="Case study: designing, building and launching Nupcial, a live two-sided wedding planning platform.">
   <meta property="og:title" content="Nupcial | Nelma Cavaleiro">
-  <meta property="og:description" content="Designing, building and launching a live platform for couples and wedding vendors, from prototype to production.">
+  <meta property="og:description" content="Case study: designing, building and launching Nupcial, a live two-sided wedding planning platform.">
   <meta property="og:type" content="website">
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='8' fill='%23241329'/><text x='16' y='21.5' font-family='Arial' font-size='14' font-weight='700' fill='%23F1D3CB' text-anchor='middle'>NC</text></svg>">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -23,11 +23,11 @@
       <nav aria-label="Main">
         <ul class="nav" id="site-nav">
         <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
         <li><a href="work.html" aria-current="page">Work</a></li>
         <li><a href="projects.html">Projects</a></li>
         <li><a href="education.html">Education</a></li>
         <li><a href="approach.html">Approach</a></li>
-        <li><a href="about.html">About</a></li>
         <li><a class="btn btn-rose btn-small" href="assets/Nelma_Cavaleiro_CV.pdf" target="_blank" rel="noopener">View CV</a></li>
         </ul>
       </nav>
@@ -54,7 +54,7 @@
             <h2>Context</h2>
             <p>Nupcial is a wedding planning platform with two sides: couples who plan their wedding, and vendors who offer services to them. It is live at <a href="https://nupcial.app" target="_blank" rel="noopener">nupcial.app</a>, and I own the whole lifecycle, from product concept and UX through to architecture, development and deployment.</p>
             <h2>Approach</h2>
-            <p>I produced a first prototype from a single prompt in Google AI Studio at a Manchester Digital event. I then rebuilt the product entirely over approximately three months, using Claude Code for AI-assisted development and debugging, so that every part of the architecture was deliberate rather than generated.</p>
+            <p>I produced a first prototype, WedWise, from a single prompt in Google AI Studio and demonstrated it at the Digital Skills Festival AI Futures session in February 2026. I then rebuilt the product entirely over approximately three months, using Claude Code for AI-assisted development and debugging, so that every part of the architecture was deliberate rather than generated.</p>
             <h2>Architecture</h2>
             <p>The client is built with React and Vite, with Zustand managing application state. Supabase provides authentication, a PostgreSQL database and Edge Functions for server-side logic. Stripe Connect handles vendor payments and the platform's commission.</p>
             <h2>Key decisions</h2>
@@ -92,6 +92,26 @@
             <div class="side-box"><h3>Tools</h3><p>React, Vite, Zustand, Supabase, Stripe Connect, Git and GitHub, Claude Code</p></div>
           </aside>
         </div>
+        <section class="collage-block" aria-labelledby="origin">
+          <h2 id="origin">Where it started</h2>
+          <p>The first prototype, WedWise, demonstrated live at the Digital Skills Festival, before I rebuilt it as Nupcial.</p>
+          <div class="collage-grid">
+          <figure class="collage t5 wide">
+          <div class="tiles">
+            <a href="assets/img/cases/nup-dsf-demo.jpg" target="_blank" rel="noopener"><img src="assets/img/cases/nup-dsf-demo.jpg" alt="Nelma presenting the WedWise seating plan at the Digital Skills Festival" loading="lazy" style="object-position:35% 50%"></a>
+            <a href="assets/img/cases/nup-dsf-presenting.jpg" target="_blank" rel="noopener"><img src="assets/img/cases/nup-dsf-presenting.jpg" alt="Nelma speaking about WedWise with the microphone" loading="lazy" style="object-position:45% 50%"></a>
+            <a href="assets/img/cases/nup-dsf-building.jpg" target="_blank" rel="noopener"><img src="assets/img/cases/nup-dsf-building.jpg" alt="Nelma building the prototype on a laptop during the session" loading="lazy" style="object-position:40% 50%"></a>
+            <a href="assets/img/cases/nup-dsf-dashboard.jpg" target="_blank" rel="noopener"><img src="assets/img/cases/nup-dsf-dashboard.jpg" alt="The WedWise dashboard on screen while Nelma presents" loading="lazy" style="object-position:45% 50%"></a>
+            <a href="assets/img/cases/nup-dsf-focus.jpg" target="_blank" rel="noopener"><img src="assets/img/cases/nup-dsf-focus.jpg" alt="Nelma working on her laptop during the session" loading="lazy" style="object-position:48% 45%"></a>
+          </div>
+          <figcaption><p class="c-title">The first prototype, WedWise</p><p class="c-meta">Digital Skills Festival, AI Futures session · February 2026</p><p class="c-note">Built from a single prompt in Google AI Studio and demonstrated live.</p></figcaption>
+        </figure>
+          </div>
+          <div class="compare">
+            <figure><a href="assets/img/cases/nup-wedwise-seating.jpg" target="_blank" rel="noopener"><img src="assets/img/cases/nup-wedwise-seating.jpg" alt="WedWise seating plan prototype" loading="lazy"></a><figcaption><p class="c-meta">Prototype</p><p class="c-note">The WedWise seating plan, February 2026.</p></figcaption></figure>
+            <figure><a href="assets/img/nupcial-seating.jpg" target="_blank" rel="noopener"><img src="assets/img/nupcial-seating.jpg" alt="Nupcial seating plan today" loading="lazy"></a><figcaption><p class="c-meta">Product</p><p class="c-note">The Nupcial seating plan today.</p></figcaption></figure>
+          </div>
+        </section>
         <section class="gallery-section" aria-labelledby="inside">
           <h2 id="inside">Inside the platform</h2>
           <p>Screens from the live platform, from sign-up to planning every part of the day.</p>
@@ -107,7 +127,7 @@
         </section>
         <nav class="next" aria-label="More case studies">
           <a href="work.html">All work</a>
-          <a href="case-ai-sprint.html">Next: AI deployment sprint</a>
+          <a href="case-brand-addition.html">Next: Brand Addition</a>
         </nav>
       </div>
     </section>

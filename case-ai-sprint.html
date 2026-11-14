@@ -3,10 +3,10 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>AI deployment sprint | Nelma Cavaleiro</title>
-  <meta name="description" content="Leading discovery, analysis and solution design to remove repetitive design work, with people kept in control at every stage.">
-  <meta property="og:title" content="AI deployment sprint | Nelma Cavaleiro">
-  <meta property="og:description" content="Leading discovery, analysis and solution design to remove repetitive design work, with people kept in control at every stage.">
+  <title>AI Deployment Sprint | Nelma Cavaleiro</title>
+  <meta name="description" content="Case study: leading discovery, business analysis and the build of a rules-based MVP for a UK manufacturer.">
+  <meta property="og:title" content="AI Deployment Sprint | Nelma Cavaleiro">
+  <meta property="og:description" content="Case study: leading discovery, business analysis and the build of a rules-based MVP for a UK manufacturer.">
   <meta property="og:type" content="website">
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='8' fill='%23241329'/><text x='16' y='21.5' font-family='Arial' font-size='14' font-weight='700' fill='%23F1D3CB' text-anchor='middle'>NC</text></svg>">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -23,11 +23,11 @@
       <nav aria-label="Main">
         <ul class="nav" id="site-nav">
         <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
         <li><a href="work.html" aria-current="page">Work</a></li>
         <li><a href="projects.html">Projects</a></li>
         <li><a href="education.html">Education</a></li>
         <li><a href="approach.html">Approach</a></li>
-        <li><a href="about.html">About</a></li>
         <li><a class="btn btn-rose btn-small" href="assets/Nelma_Cavaleiro_CV.pdf" target="_blank" rel="noopener">View CV</a></li>
         </ul>
       </nav>
@@ -36,15 +36,10 @@
   <main id="main">
     <section class="page-head">
       <div class="wrap">
-        <p class="crumbs"><a href="work.html">Work</a> / AI deployment sprint</p>
-        <h1>AI deployment sprint: from discovery to solution design for a UK manufacturer</h1>
-        <p>From discovery and analysis to designing and building a working tool that removes repetitive design work, with people kept in control at every stage.</p>
-        <dl class="case-meta">
-          <div><dt>Role</dt><dd>Team Lead</dd></div>
-          <div><dt>Period</dt><dd>October to November 2026</dd></div>
-          <div><dt>Focus</dt><dd>Business analysis, solution design and build</dd></div>
-          <div><dt>Status</dt><dd>In progress</dd></div>
-        </dl>
+        <p class="crumbs"><a href="work.html">Work</a> / AI Deployment Sprint</p>
+        <h1>AI Deployment Sprint: from discovery to a working MVP for a UK manufacturer</h1>
+        <p>Leading discovery, business analysis and the build of a rules-based MVP that removes repetitive design work, with people kept in control at every stage.</p>
+        <dl class="case-meta"><div><dt>Role</dt><dd>Team Lead</dd></div><div><dt>Period</dt><dd>October 2026 to present</dd></div><div><dt>Focus</dt><dd>Business analysis, solution design and build</dd></div><div><dt>Status</dt><dd>Selected by the client</dd></div></dl>
       </div>
     </section>
     <section class="section">
@@ -52,65 +47,49 @@
         <div class="prose-grid">
           <article class="prose">
             <h2>Context</h2>
-            <p>An eight-week AI Deployment Sprint delivered by Manchester Digital with Manchester Metropolitan University. I lead a team working with a UK manufacturer of leisure safety products.</p>
-            <h2>The problem</h2>
-            <p>Preparing bespoke products for automated cutting involves repetitive manual design work across several software tools that are not connected to one another, which limits the capacity of the person who does it.</p>
+            <p>An eight-week AI Deployment Sprint, funded by Innovate UK and delivered by Manchester Digital with Manchester Metropolitan University. I led a team working with a UK manufacturer to reduce repetitive manual design work. Details of the client’s products and processes are kept confidential at the client’s request.</p>
             <h2>My role</h2>
-            <p>As Team Lead, I am responsible for planning, coordination, documentation and client communication. In practice, I have also led much of the business and technical analysis and the solution design.</p>
-            <h2>Discovery and business analysis</h2>
+            <p>As Team Lead, I was responsible for planning, risks, decisions, documentation and client communication. The work also involved much of the analysis and solution design, which I led.</p>
+            <h2>How I approached it</h2>
+            <ol class="method">
+              <li><b>Discover</b><span>Agree the problem and scope with the client.</span></li>
+              <li><b>Map</b><span>Model and time the current process in BPMN.</span></li>
+              <li><b>Analyse</b><span>Study design and production files in Python.</span></li>
+              <li><b>Validate</b><span>Confirm the design rules with the client.</span></li>
+              <li><b>Specify and build</b><span>Write the specification, then build in small stories.</span></li>
+              <li><b>Test and hand over</b><span>Check against approved files and document.</span></li>
+            </ol>
+            <h2>Discovery and analysis</h2>
             <ul>
-              <li>Agreed the problem statement with the client and mapped the order-to-manufacture process in BPMN, reviewed and approved by the person who does the work.</li>
-              <li>Timed the current process: a standard design took 25 minutes, of which the manufacturing drawing alone took 72%. This showed where the real time cost was, which was not where it had first been assumed.</li>
-              <li>Wrote the business analysis: stakeholders and pain points, baseline measures, root cause analysis (fishbone and 5 Whys), constraints, user stories with acceptance criteria, and the business case.</li>
-              <li>Captured a traceability requirement from operations and built it into the solution criteria.</li>
+              <li>Mapped and timed the current process in BPMN, validated with the process owner, to find where the manual effort was concentrated.</li>
+              <li>Analysed 130 CAD and production files in Python (ezdxf, pypdf) and documented over 40 design and manufacturing rules, validated with the client through automated reconciliation checks.</li>
+              <li>Conducted the business analysis: root cause analysis (fishbone and 5 Whys), MoSCoW-prioritised requirements, acceptance criteria and an options appraisal.</li>
             </ul>
-            <h2>Technical analysis with Python</h2>
+            <h2>Building the MVP</h2>
+            <p>I designed and built a rules-based MVP in Python, Flask and SQLite, with a layered architecture and human approval at each stage. I wrote the specification first, then delivered the work as small user stories, directing Claude Code against the specification. I approved each plan before any code was written and reviewed every change before it was merged.</p>
             <ul>
-              <li>Analysed 130 design and production files using Python in VS Code, with AI-assisted development, running everything locally and read-only. I used ezdxf to read and measure the cutting files, pypdf to extract details from drawings and orders, and zipfile to open the design files and extract the formulas behind the parametric model.</li>
-              <li>Compared raw design exports with finished production files for a real order, identifying exactly which steps were manual, and found and resolved a 30 mm dimensional discrepancy.</li>
-              <li>Derived the cutting machine's file requirements from its configuration and tested sample files against them.</li>
+              <li>Automated quality gates on every change: ruff, strict mypy, import-linter and pytest, with a separate branch for each story and all automated tests passing.</li>
+              <li>No AI inside the tool: the rules are applied in plain code, so the same input always gives the same result.</li>
             </ul>
-            <h2>Rules discovery and validation</h2>
-            <p>From the analysis, I extracted the design, manufacturing, machine and drawing rules, labelled as observed until confirmed, then validated them with the client: over 40 rules in a documented register. An automated check showed the rules reproduced the finished cutting files, passing 11 of 11 and 14 of 15 checks. Where sources disagreed, I raised the inconsistencies and resolved them with the client.</p>
-            <h2>Solution design</h2>
-            <ul>
-              <li>Wrote the solution analysis: capabilities, functional and non-functional requirements with MoSCoW priorities, guardrails, a review of existing software, an options evaluation, feasibility tests and a recommendation.</li>
-              <li>Designed a rules-based order-to-production tool that reads the sales order, applies the documented rules and produces the cutting file and manufacturing drawing, with human approval at each stage. AI is used to help build the tool, not inside it, so production decisions stay predictable and checkable.</li>
-              <li>Designed it around two needs: saving the designer's time, and traceability for operations.</li>
-            </ul>
-            <h2>Building the tool</h2>
-            <p>I designed and built a Python and Flask tool that turns a sales order into a cutting file (DXF) and a manufacturing drawing, with the designer approving every stage. I wrote the specification first, then delivered the work as 18 small user stories, directing Claude Code as the implementation agent against the specification, written coding rules and acceptance tests for every story. I approved each plan before any code was written and reviewed every change before it was merged.</p>
-            <ul>
-              <li>A layered architecture, with automatic checks that enforce which parts of the code may call which.</li>
-              <li>Automated quality gates on every commit: ruff, mypy (strict), import-linter and pytest, with a separate branch for each story.</li>
-              <li>An order reader that verifies every line and refuses anything it cannot check, so errors are caught before anything is generated.</li>
-              <li>No AI inside the tool and no external services: the rules are applied in plain code, so the same order always gives the same result, and client data stays within the client's environment.</li>
-            </ul>
-            <h2>Testing and validation</h2>
-            <ul>
-              <li>Generated cutting files were compared automatically against the client's approved reference files.</li>
-              <li>Cutting files loaded on the client's cutting machine software with correct dimensions.</li>
-              <li>Ambiguous rules and labelling conventions were resolved directly with the designer before being built, rather than guessed.</li>
-              <li>A user trial with the client's team has been set up to gather feedback on the working tool.</li>
-            </ul>
+            <h2>Outcome</h2>
+            <p>The MVP cut standard order preparation by over 99%, from about 25 minutes to 12 seconds, with outputs matching the client’s approved files and loading correctly in their production software. After trialling it, the client selected it as its chosen solution.</p>
             <h2>Handover</h2>
-            <p>I produced install, user and maintenance guides, and demonstrated the working solution live to the client and to the programme team, including the structured approach used to build it.</p>
-            <h2>Outcome so far</h2>
-            <p>The tool works end to end for standard products, from order to cutting file and drawing. Some tests are still to come, such as nesting on the cutting machine, and the time and cost savings have not yet been measured, so they remain targets. Final outcomes will be shared here once the client has approved what can be published.</p>
+            <p>I produced user, maintenance and troubleshooting guides to support handover to the client.</p>
           </article>
           <aside class="side">
-            <div class="side-box"><h3>Status</h3><p>In progress, October to November 2026</p></div>
-            <div class="side-box"><h3>Key figures</h3><p>130 files analysed, over 40 rules validated, 72% of design time found in a single step, 18 user stories delivered</p></div>
-            <div class="side-box"><h3>Methods</h3><p>BPMN, root cause analysis, user stories and acceptance criteria, MoSCoW, options evaluation, proof of concept</p></div>
-            <div class="side-box"><h3>Tools</h3><p>Python (ezdxf, pypdf, zipfile), Flask, pytest, ruff, mypy, import-linter, Git, VS Code, Lucidchart, Claude Code</p></div>
+            <div class="side-box"><h3>Result</h3><p>Standard order preparation cut by over 99%, from about 25 minutes to 12 seconds</p></div>
+            <div class="side-box"><h3>Key figures</h3><p>130 files analysed, over 40 rules validated with the client</p></div>
+            <div class="side-box"><h3>Methods</h3><p>BPMN, root cause analysis, MoSCoW, acceptance criteria, options appraisal</p></div>
+            <div class="side-box"><h3>Tools</h3><p>Python, Flask, SQLite, pytest, ruff, mypy, import-linter, Git, Lucidchart, Claude Code</p></div>
+            <div class="side-box"><h3>Programme</h3><p>Funded by Innovate UK, delivered by Manchester Digital with Manchester Metropolitan University</p></div>
           </aside>
         </div>
         <section class="gallery-section" aria-label="Photo from the programme">
-          <div class="photos"><figure class="shot shot-free narrow"><a href="assets/img/aims-training.jpg" target="_blank" rel="noopener"><img src="assets/img/aims-training.jpg" alt="AI training session during the AIMS programme" loading="lazy"></a><figcaption>An AI training session during the AIMS programme.</figcaption></figure></div>
+          <div class="photos"><figure class="shot shot-free narrow"><a href="assets/img/aims-training.jpg" target="_blank" rel="noopener"><img src="assets/img/aims-training.jpg" alt="AI training session during the AIMS programme" loading="lazy"></a><figcaption>An AI training session during the programme.</figcaption></figure></div>
         </section>
-        <nav class="next" aria-label="More case studies">
+        <nav class="next" aria-label="More">
           <a href="work.html">All work</a>
-          <a href="case-brand-addition.html">Next: Brand Addition</a>
+          <a href="case-nupcial.html">Next: Nupcial</a>
         </nav>
       </div>
     </section>
