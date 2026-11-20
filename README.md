@@ -2,7 +2,7 @@
 
 **Live site:** [nelmacavaleiro.github.io](https://nelmacavaleiro.github.io)
 
-Personal portfolio presenting my work across business analysis, solution design, data and AI. It includes case studies on an AI Deployment Sprint with Manchester Digital and Manchester Metropolitan University, funded by Innovate UK; Nupcial, a live two-sided wedding planning platform; and operational and process improvement work at Brand Addition. It also covers projects with Rolls-Royce at Project:Hack27 and with Nota Bene Consulting, my education and my certifications.
+Personal portfolio presenting my work across business analysis, solution design, data, AI and automation. It includes case studies on an AI Deployment Sprint with Manchester Digital and Manchester Metropolitan University, funded by Innovate UK; Nupcial, a live two-sided wedding planning platform; and operational and process improvement work at Brand Addition. It also covers projects with Rolls-Royce at Project:Hack27 and with Nota Bene Consulting, my education and my certifications.
 
 ## About the site
 
